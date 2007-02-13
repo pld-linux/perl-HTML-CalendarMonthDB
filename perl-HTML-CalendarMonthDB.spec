@@ -6,7 +6,7 @@
 %define		pdir	HTML
 %define		pnam	CalendarMonthDB
 Summary:	HTML::CalendarMonthDB - generating HTML calendar with persistant data
-Summary(pl.UTF-8):   HTML::CalendarMonthDB - generowanie kalendarza w HTML z trwałymi danymi
+Summary(pl.UTF-8):	HTML::CalendarMonthDB - generowanie kalendarza w HTML z trwałymi danymi
 Name:		perl-HTML-CalendarMonthDB
 Version:	1.01
 Release:	1
