@@ -9,7 +9,7 @@ Summary:	HTML::CalendarMonthDB - generating HTML calendar with persistant data
 Summary(pl.UTF-8):	HTML::CalendarMonthDB - generowanie kalendarza w HTML z trwałymi danymi
 Name:		perl-HTML-CalendarMonthDB
 Version:	1.01
-Release:	1
+Release:	2
 License:	free (see README)
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
