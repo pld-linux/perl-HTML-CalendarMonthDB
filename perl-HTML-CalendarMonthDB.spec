@@ -1,10 +1,10 @@
 #
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
-#
-%include	/usr/lib/rpm/macros.perl
+
 %define		pdir	HTML
 %define		pnam	CalendarMonthDB
+%include	/usr/lib/rpm/macros.perl
 Summary:	HTML::CalendarMonthDB - generating HTML calendar with persistant data
 Summary(pl.UTF-8):	HTML::CalendarMonthDB - generowanie kalendarza w HTML z trwałymi danymi
 Name:		perl-HTML-CalendarMonthDB
@@ -14,12 +14,13 @@ License:	free (see README)
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	b9297144606d7ba3ba6eea93eda3c9ec
+URL:		http://search.cpan.org/dist/HTML-CalendarMonthDB/
+BuildRequires:	perl-devel >= 1:5.8.0
+BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
 BuildRequires:	perl-DBI
 BuildRequires:	perl-Date-Calc
 %endif
-BuildRequires:	perl-devel >= 1:5.8.0
-BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -57,7 +58,7 @@ install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-install cgi/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+cp -p cgi/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
