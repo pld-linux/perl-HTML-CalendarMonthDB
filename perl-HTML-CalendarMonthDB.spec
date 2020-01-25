@@ -4,7 +4,6 @@
 
 %define		pdir	HTML
 %define		pnam	CalendarMonthDB
-%include	/usr/lib/rpm/macros.perl
 Summary:	HTML::CalendarMonthDB - generating HTML calendar with persistant data
 Summary(pl.UTF-8):	HTML::CalendarMonthDB - generowanie kalendarza w HTML z trwałymi danymi
 Name:		perl-HTML-CalendarMonthDB
